@@ -1,12 +1,15 @@
 <template>
-  <b-table striped hover :items="teams" :fields="fields">
-    <template #cell(position)="data">
-      {{ data.index + 1 }}
-    </template>
-    <template #cell(goalDifference)="data">
-      {{ calculateGoalDifference(data.item) }}
-    </template>
-  </b-table>
+  <section>
+    <h2 class="text-center">Ranking</h2>
+    <b-table striped hover :items="teams" :fields="fields">
+      <template #cell(position)="data">
+        {{ data.index + 1 }}
+      </template>
+      <template #cell(goalDifference)="data">
+        {{ calculateGoalDifference(data.item) }}
+      </template>
+    </b-table>
+  </section>
 </template>
 
 <script>
